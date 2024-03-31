@@ -41,6 +41,9 @@ ls(char *path)
     return;
   }
 
+  fprintf(1, "path is %s\n", path);
+
+  fprintf(1, "st.type is %d\n", st.type);
   switch(st.type){
   case T_FILE:
     printf("%s %d %d %l\n", fmtname(path), st.type, st.ino, st.size);
